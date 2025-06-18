@@ -16,22 +16,20 @@ const Input = ({ type, placeholder, value, onChange, label, error }: InputProps)
     <div className="relative w-full">
       {label && (
         <label
-          className={`absolute left-3 top-2 text-sm px-1 transition-all duration-200 bg-white z-10 pointer-events-none ${
-            focused || value
-              ? 'text-xs -top-2 text-blue-600'
+          className={`absolute left-3 top-2 text-sm px-1 bg-white z-10 pointer-events-none transition-all duration-200 ${focused || value
+              ? 'text-xs -top-2 text-blue-600 typing-label'
               : 'text-gray-500 top-2'
-          }`}
+            }`}
         >
           {label}
         </label>
       )}
 
       <div
-        className={`rounded-md p-[2px] transition-all duration-300 ${
-          focused
-            ? 'bg-gradient-to-r from-purple-500 via-blue-500 to-purple-500 animate-gradient-border'
-            : 'bg-gray-300'
-        }`}
+        className={`rounded-md p-[2px] transition-all duration-300 ${focused
+          ? 'bg-gradient-to-r from-purple-500 via-blue-500 to-purple-500 animate-gradient-border'
+          : 'bg-gray-300'
+          }`}
       >
         <input
           type={type}

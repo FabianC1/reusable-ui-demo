@@ -18,3 +18,21 @@
   background-size: 200% 200%;
   animation: gradient-border 4s ease infinite;
 }
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.typing-label {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid;
+  width: 0;
+  animation: typing 0.7s steps(20, end) forwards;
+}
