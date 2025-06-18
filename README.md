@@ -17,17 +17,6 @@ This project showcases a clean and animated reusable UI component system built w
 - Clean and minimal design
 - Tailwind-powered theme with dark mode support (planned)
 
-## 📁 Project Structure
-
-src/
-├── components/ # Reusable UI components
-│ ├── Input.tsx
-│ └── Button.tsx
-├── pages/
-│ └── LoginPage.tsx
-├── App.tsx # Main app
-└── index.css # Tailwind directives and global styles
-
 ## 🚀 Getting Started
 
 ```bash
