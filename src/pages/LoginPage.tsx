@@ -7,7 +7,7 @@ const LoginPage = () => {
   const [password, setPassword] = useState('');
 
   const handleLogin = () => {
-    alert(`Logging in with: ${email} / ${password}`);
+    null;
   };
 
   return (
@@ -28,7 +28,7 @@ const LoginPage = () => {
             onChange={e => setPassword(e.target.value)}
           />
           <Button onClick={handleLogin}>
-            Sign In
+            Log In
           </Button>
         </div>
       </div>
