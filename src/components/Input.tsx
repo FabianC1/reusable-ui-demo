@@ -26,19 +26,23 @@ const Input = ({ type, placeholder, value, onChange, label, error }: InputProps)
         </label>
       )}
 
-      <input
-        type={type}
-        placeholder={placeholder}
-        value={value}
-        onChange={onChange}
-        onFocus={() => setFocused(true)}
-        onBlur={() => setFocused(false)}
-        className={`w-full px-4 py-3 rounded-md border bg-white text-gray-900 transition-all duration-300 focus:outline-none focus:ring-2 ${
-          error
-            ? 'border-red-500 focus:ring-red-400'
-            : 'border-gray-300 focus:ring-blue-500'
+      <div
+        className={`rounded-md p-[2px] transition-all duration-300 ${
+          focused
+            ? 'bg-gradient-to-r from-purple-500 via-blue-500 to-purple-500 animate-gradient-border'
+            : 'bg-gray-300'
         }`}
-      />
+      >
+        <input
+          type={type}
+          placeholder={placeholder}
+          value={value}
+          onChange={onChange}
+          onFocus={() => setFocused(true)}
+          onBlur={() => setFocused(false)}
+          className="w-full px-4 py-3 rounded-md bg-white text-gray-900 border-none focus:outline-none"
+        />
+      </div>
 
       {error && <p className="text-xs text-red-500 mt-1">{error}</p>}
     </div>
